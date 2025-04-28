@@ -2,6 +2,7 @@ import styles from "./App.module.css";
 import Description from "../Description/Description";
 import Options from "../Options/Options";
 import Feedback from "../Feedback/Feedback";
+import Notification from "../Notification/Notification";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -59,7 +60,7 @@ function App() {
           positiveFeedback={positiveFeedback}
         ></Feedback>
       )}
-      {totalFeedback == 0 && <p>No feedback yet</p>}
+      {totalFeedback == 0 && <Notification />}
     </div>
   );
 }
